@@ -18,7 +18,7 @@ interface Notification {
 export function Header({ onSearch }: { onSearch: (query: string) => void }) {
  
   const router = useRouter()
-  const [userName, setUserName] = useState("Michael Shaw")
+  const [userName, setUserName] = useState("")
   const [notifications, setNotifications] = useState<Notification[]>([])
 
   useEffect(() => {
@@ -46,7 +46,9 @@ export function Header({ onSearch }: { onSearch: (query: string) => void }) {
 
   const handleLogout = () => {
     // Remove the token
-    Cookies.remove('token')
+    localStorage.removeItem('token')
+    localStorage.removeItem('user')
+   
     // Redirect to login
     router.push('/login')
   }

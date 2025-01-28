@@ -79,7 +79,7 @@ export function PatientDetails({ patient, onClose }: PatientDetailsProps) {
         <Tabs defaultValue="vitals">
           <TabsList className="grid w-full grid-cols-5 px-10">
             <TabsTrigger value="vitals">Vitals</TabsTrigger>
-            <TabsTrigger value="medical-records">MedicalRecords</TabsTrigger>
+            <TabsTrigger value="medical-records">Records</TabsTrigger>
             <TabsTrigger value="medications">Medications</TabsTrigger>
             <TabsTrigger value="lab-results">Lab Results</TabsTrigger>
             <TabsTrigger value="appointment-history">History</TabsTrigger>
