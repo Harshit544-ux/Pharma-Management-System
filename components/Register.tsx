@@ -55,7 +55,8 @@ export default function RegisterPage() {
       if (response.ok) {
         const data = await response.json()
         console.log("Registration successful:", data)
-        localStorage.setItem('userName', `${first_name} ${last_name}`) // Store the user's name in local storage
+        const fullName = `${first_name} ${last_name}`
+        localStorage.setItem('userName', fullName) 
         router.push('/dashboard')
       } else {
         const errorData = await response.json()
